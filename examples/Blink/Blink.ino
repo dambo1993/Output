@@ -5,7 +5,7 @@ Output led(LED_BUILTIN);
 
 void setup() 
 {
-	
+	led.start();
 }
 
 void loop() {

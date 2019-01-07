@@ -10,6 +10,7 @@ Output led(LED_BUILTIN);
 
 void setup() 
 {
+	led.start();
 }
 
 void loop() {
@@ -27,12 +28,13 @@ Output led2(12, true); // set second led as inverse logic
 
 void setup() 
 {
-	
+	led.start();
+	led2.start();
 }
 
 void loop() {
 	led.toggle();
-  led2.toggle();
+	led2.toggle();
 	delay(1000);
 }
 ```
@@ -42,7 +44,9 @@ void loop() {
 #include <Output.hpp>
 
 Output led(LED_BUILTIN);
-
+...
+led.start();
+...
 led.on();
 led.off();
 led.toggle();

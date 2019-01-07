@@ -15,6 +15,8 @@ class Output
 public:
 	Output(int pin, bool inverse=false, bool state=false);
 	
+	void start(void);
+
 	void on(void);
 	void off(void);
 	void set(bool state);
@@ -24,9 +26,6 @@ private:
 	int _pin;
 	bool _inverse;
 	bool _state;
-
-	inline void setOn(void);
-	inline void setOff(void);
 };
 
 #endif /* SRC_OUTPUT_OUTPUT_HPP_ */
