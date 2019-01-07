@@ -15,9 +15,11 @@ class Output
 public:
 	Output(int pin);
 	Output(int pin, bool inverse);
-
+	Output::Output(int pin, bool inverse, bool state);
+	
 	void on(void);
 	void off(void);
+	void set(void);
 	void toggle(void);
 	bool getState(void);
 private:

@@ -8,20 +8,35 @@
 #include <Arduino.h>
 #include "Output.hpp"
 
+
 Output::Output(int pin)
 {
-	pinMode(pin, OUTPUT);
 	_pin = pin;
 	_inverse = false;
 	_state = false;
+	
+	this->off();
+	pinMode(pin, OUTPUT);
 }
 
 Output::Output(int pin, bool inverse)
 {
-	pinMode(pin, OUTPUT);
 	_pin = pin;
-	_inverse = true;
+	_inverse = inverse;
 	_state = false;
+	
+	this->off();
+	pinMode(pin, OUTPUT);
+}
+
+Output::Output(int pin, bool inverse, bool state)
+{
+	_pin = pin;
+	_inverse = inverse;
+	_state = false;
+	
+	this->set(state);
+	pinMode(pin, OUTPUT);
 }
 
 void Output::on(void)
@@ -50,6 +65,18 @@ void Output::off(void)
 	}
 }
 
+void Output::set(bool state)
+{
+	if(state)
+	{
+		this->on();
+	}
+	else
+	{
+		this->off();
+	}
+}
+
 void Output::toggle(void)
 {
 	if(_state)
@@ -60,4 +87,9 @@ void Output::toggle(void)
 	{
 		this->on();
 	}
+}
+
+bool Output::getState(void)
+{
+	return _state;
 }
