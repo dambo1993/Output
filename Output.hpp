@@ -19,7 +19,7 @@ public:
 	
 	void on(void);
 	void off(void);
-	void set(void);
+	void set(bool state);
 	void toggle(void);
 	bool getState(void);
 private:

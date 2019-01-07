@@ -15,7 +15,7 @@ Output::Output(int pin)
 	_inverse = false;
 	_state = false;
 	
-	this->off();
+	Output::off();
 	pinMode(pin, OUTPUT);
 }
 
@@ -25,7 +25,7 @@ Output::Output(int pin, bool inverse)
 	_inverse = inverse;
 	_state = false;
 	
-	this->off();
+	Output::off();
 	pinMode(pin, OUTPUT);
 }
 
@@ -35,7 +35,7 @@ Output::Output(int pin, bool inverse, bool state)
 	_inverse = inverse;
 	_state = false;
 	
-	this->set(state);
+	Output::set(state);
 	pinMode(pin, OUTPUT);
 }
 
@@ -69,11 +69,11 @@ void Output::set(bool state)
 {
 	if(state)
 	{
-		this->on();
+		Output::on();
 	}
 	else
 	{
-		this->off();
+		Output::off();
 	}
 }
 
@@ -81,11 +81,11 @@ void Output::toggle(void)
 {
 	if(_state)
 	{
-		this->off();
+		Output::off();
 	}
 	else
 	{
-		this->on();
+		Output::on();
 	}
 }
 
