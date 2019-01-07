@@ -13,7 +13,7 @@ Output::Output(int pin, bool inverse, bool state)
 {
 	_pin = pin;
 	_inverse = inverse;
-	_state = false;
+	_state = state;
 	
 	Output::set(state);
 	pinMode(pin, OUTPUT);
