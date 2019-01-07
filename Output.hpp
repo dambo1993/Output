@@ -13,7 +13,7 @@
 class Output
 {
 public:
-	Output::Output(int pin, bool inverse=false, bool state=false);
+	Output(int pin, bool inverse=false, bool state=false);
 	
 	void on(void);
 	void off(void);
