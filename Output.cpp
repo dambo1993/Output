@@ -9,27 +9,7 @@
 #include "Output.hpp"
 
 
-Output::Output(int pin)
-{
-	_pin = pin;
-	_inverse = false;
-	_state = false;
-	
-	Output::off();
-	pinMode(pin, OUTPUT);
-}
-
-Output::Output(int pin, bool inverse)
-{
-	_pin = pin;
-	_inverse = inverse;
-	_state = false;
-	
-	Output::off();
-	pinMode(pin, OUTPUT);
-}
-
-Output::Output(int pin, bool inverse, bool state)
+Output::Output(int pin, bool inverse = false, bool state=false)
 {
 	_pin = pin;
 	_inverse = inverse;
