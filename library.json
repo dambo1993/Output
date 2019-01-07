@@ -1,0 +1,22 @@
+{
+  "name": "Output",
+  "keywords": "output, pin, led",
+  "description": "Arduino Library for easier outputs",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/dambo1993/Output.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Przemyslaw Michalak",
+      "email": "thedambo1@gmail.com",
+      "url": "http://projektydmb.blogspot.com/,
+      "maintainer": true
+    }
+  ],
+  "version": "0.2",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
