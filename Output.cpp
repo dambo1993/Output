@@ -39,11 +39,11 @@ void Output::off(void)
 	_state = false;
 	if(!_inverse)
 	{
-		digitalWrite(_pin, HIGH);
+		digitalWrite(_pin, LOW);
 	}
 	else
 	{
-		digitalWrite(_pin, LOW);
+		digitalWrite(_pin, HIGH);
 	}
 }
 
