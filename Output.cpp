@@ -15,7 +15,7 @@ Output::Output(int pin, bool inverse, bool state)
 	_state = false;
 }
 
-void Output::start(void)
+void Output::init(void)
 {
 	set(_state);
 	pinMode(_pin, OUTPUT);

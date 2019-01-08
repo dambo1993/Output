@@ -5,8 +5,8 @@ Output led2(12, true); // set second led as inverse logic
 
 void setup() 
 {
-	led.start();
-	led2.start();
+	led.init();
+	led2.init();
 }
 
 void loop() {

@@ -15,7 +15,7 @@ class Output
 public:
 	Output(int pin, bool inverse=false, bool state=false);
 	
-	void start(void);
+	void init(void);
 
 	void on(void);
 	void off(void);
