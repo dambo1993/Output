@@ -16,6 +16,7 @@ public:
 	Output(int pin, bool inverse=false, bool state=false);
 	
 	void init(void);
+	void begin(void);
 
 	void on(void);
 	void off(void);

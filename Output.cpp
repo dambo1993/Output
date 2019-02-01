@@ -15,6 +15,11 @@ Output::Output(int pin, bool inverse, bool state)
 	_state = state;
 }
 
+void Output::begin(void)
+{
+	init();
+}
+
 void Output::init(void)
 {
 	set(_state);
