@@ -11,8 +11,8 @@
 Output::Output(int pin, bool inverse, bool state)
 {
 	_pin = pin;
-	_inverse = false;
-	_state = false;
+	_inverse = inverse;
+	_state = state;
 }
 
 void Output::init(void)
