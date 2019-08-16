@@ -28,11 +28,13 @@ void Output::init(void)
 
 void Output::on(void)
 {
+	_state = true;
 	digitalWrite(_pin, !_inverse);
 }
 
 void Output::off(void)
 {
+	_state = false;
 	digitalWrite(_pin, _inverse);
 }
 
