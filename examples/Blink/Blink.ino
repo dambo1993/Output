@@ -1,6 +1,5 @@
 #include <Output.hpp>
 
-
 Output led(LED_BUILTIN);
 
 void setup() 
@@ -8,7 +7,8 @@ void setup()
 	led.init();
 }
 
-void loop() {
+void loop() 
+{
 	led.toggle();
 	delay(1000);
 }

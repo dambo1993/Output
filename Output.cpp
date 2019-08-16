@@ -28,28 +28,12 @@ void Output::init(void)
 
 void Output::on(void)
 {
-	_state = true;
-	if(!_inverse)
-	{
-		digitalWrite(_pin, HIGH);
-	}
-	else
-	{
-		digitalWrite(_pin, LOW);
-	}
+	digitalWrite(_pin, !_inverse);
 }
 
 void Output::off(void)
 {
-	_state = false;
-	if(!_inverse)
-	{
-		digitalWrite(_pin, LOW);
-	}
-	else
-	{
-		digitalWrite(_pin, HIGH);
-	}
+	digitalWrite(_pin, _inverse);
 }
 
 void Output::set(bool state)
